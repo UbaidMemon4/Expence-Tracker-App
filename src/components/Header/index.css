@@ -1,0 +1,12 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #b7b7b7;
+}
+.buttons {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+    margin-right: 10px;
+    gap: 15px;
+  }
