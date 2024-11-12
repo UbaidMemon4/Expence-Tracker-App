@@ -18,7 +18,7 @@ const Login = () => {
         signUpUser.password === values.password
       ) {
         dispatch(loginUser(signUpUser));
-        navigate("/")
+        navigate("/");
       } else {
         alert("Invalid Credentials");
       }
@@ -41,7 +41,7 @@ const Login = () => {
           span: 16,
         }}
         style={{
-          maxWidth: 600,
+          maxWidth: 800,
         }}
         initialValues={{
           remember: true,
@@ -61,7 +61,7 @@ const Login = () => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Example@gmail.com" />
         </Form.Item>
 
         <Form.Item
@@ -74,7 +74,7 @@ const Login = () => {
             },
           ]}
         >
-          <Input.Password />
+          <Input.Password placeholder="********" />
         </Form.Item>
 
         <Form.Item
@@ -85,7 +85,7 @@ const Login = () => {
             span: 16,
           }}
         >
-          <Checkbox>Remember me</Checkbox>
+          <Checkbox style={{ color: "white" }}>Remember me</Checkbox>
         </Form.Item>
 
         <Form.Item

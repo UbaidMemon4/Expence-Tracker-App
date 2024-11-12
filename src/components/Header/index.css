@@ -1,12 +1,16 @@
 .head {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #b7b7b7;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding: 8px 10px;
 }
 .buttons {
-    display: flex;
-    justify-content: end;
-    margin-top: 30px;
-    margin-right: 10px;
-    gap: 15px;
-  }
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  margin-top: 5px;
+}
+.heading {
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}

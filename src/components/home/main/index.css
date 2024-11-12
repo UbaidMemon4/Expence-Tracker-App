@@ -7,9 +7,9 @@
 }
 .main h1 {
   text-align: start;
-  /* margin-left: 10px; */
-  margin-bottom: 53px;
+  margin-bottom: 30px;
 }
-.but{
+.but {
+  margin-top: 10px;
   width: 110px;
 }

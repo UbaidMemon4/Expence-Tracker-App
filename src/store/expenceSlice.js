@@ -15,6 +15,7 @@ export const expenceSlice = createSlice({
     },
     logout: (state) => {
       state.user = null;
+      localStorage.removeItem("login");
     },
     addTracker: (state, action) => {
       const trackerDet = {
@@ -25,7 +26,9 @@ export const expenceSlice = createSlice({
     },
     onEdit: (state, action) => {
       const update = action.payload;
-      state.tracker = state.tracker.map((o) => o.id !== update);
+      state.tracker = state.tracker.map((o) =>
+        o.id === update.id ? { ...update } : o
+      );
       localStorage.setItem("tracker", JSON.stringify(state.tracker));
     },
     onDelete: (state, action) => {

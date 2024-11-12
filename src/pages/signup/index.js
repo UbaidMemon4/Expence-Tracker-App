@@ -4,12 +4,11 @@ import "./index.css";
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
-
   const navigation = useNavigate();
   const onFinish = (values) => {
-    localStorage.setItem("signup",JSON.stringify(values));
+    localStorage.setItem("signup", JSON.stringify(values));
     console.log("Success:", values);
-    navigation("/login")
+    navigation("/login");
   };
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -26,7 +25,7 @@ const Signup = () => {
           span: 16,
         }}
         style={{
-          maxWidth: 600,
+          maxWidth: 800,
         }}
         initialValues={{
           remember: true,
@@ -38,6 +37,9 @@ const Signup = () => {
         <Form.Item
           label="Name"
           name="name"
+          style={{
+            color: "white",
+          }}
           rules={[
             {
               required: true,
@@ -45,7 +47,7 @@ const Signup = () => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Ubaid" />
         </Form.Item>
         <Form.Item
           label="Email"
@@ -58,7 +60,8 @@ const Signup = () => {
             },
           ]}
         >
-          <Input />
+          <Input placeholder="Example@gmail.com"
+           />
         </Form.Item>
 
         <Form.Item
@@ -71,7 +74,7 @@ const Signup = () => {
             },
           ]}
         >
-          <Input.Password />
+          <Input.Password  placeholder="********"/>
         </Form.Item>
         <Form.Item
           label="Comform Password"
@@ -83,7 +86,7 @@ const Signup = () => {
             },
           ]}
         >
-          <Input.Password />
+          <Input.Password placeholder="********"/>
         </Form.Item>
 
         <Form.Item

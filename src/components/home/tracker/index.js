@@ -51,7 +51,7 @@ const Tracker = () => {
     dispatch(onEdit(s.id));
   };
   const onClickDelete = (id) => {
-    dispatch(onDelete(id))
+    dispatch(onDelete(id));
   };
   return (
     <>
@@ -59,7 +59,6 @@ const Tracker = () => {
         Add Expences
       </Button>
       <Modal
-        title="Expence"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -135,27 +134,18 @@ const Tracker = () => {
                 Cancel
               </Button>
               <Button type="primary" htmlType="submit">
-                submit
                 {trackerId ? "Update" : "Submit"}
               </Button>
             </div>
           </Form.Item>
         </Form>
       </Modal>
-      <div></div>
       <div>
         {trackerList.map((t) => {
           return (
             <div>
               <div key={t.id} className="trackor-container">
-                <Card
-                  title="Taacker"
-                  bordered={false}
-                  className="boder"
-                  style={{
-                    width: 1150,
-                  }}
-                >
+                <Card title="Tracker" bordered={false} className="boder">
                   <p>
                     <b>Title : </b>
                     {t.title}
@@ -168,20 +158,14 @@ const Tracker = () => {
                     <b>Amount : </b>
                     {t.amount}
                   </p>
-                  <Button
-                    className="trackor-button"
-                    type="primary"
-                    onClick={() => onClickEdit(t)}
-                  >
-                    Edit
-                  </Button>
-                  <Button
-                    className="trackor-button"
-                    type="primary"
-                    onClick={() => onClickDelete(t.id)}
-                  >
-                    Delete
-                  </Button>
+                  <div className="trackor-button">
+                    <Button type="primary" onClick={() => onClickEdit(t)}>
+                      Edit
+                    </Button>
+                    <Button type="primary" onClick={() => onClickDelete(t.id)}>
+                      Delete
+                    </Button>
+                  </div>
                 </Card>
               </div>
             </div>

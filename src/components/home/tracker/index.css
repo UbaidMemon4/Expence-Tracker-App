@@ -1,18 +1,21 @@
-.modal_but{
-    margin-top: 20px;
-    margin-left: 25px;
+.modal_but {
+  margin: 10px 0 10px 25px;
+  /* margin-bottom: 25px;
+  margin-top: 20px;
+  margin-left: 25px; */
 }
-.trackor-container{
-  padding-bottom: 22px
-
+.trackor-container {
+  padding-bottom: 22px;
 }
-.boder{
-    margin: 10px 100px 0px 100px;
-    border: 2px solid black;
-  
+.boder {
+  margin: 5px 50px;
+  border: 2px solid #b7b7b7;
 }
-.trackor-button{
-    cursor: pointer;
-    margin-left: 20px;
-    margin-right: 20px;
+.trackor-button {
+  display: flex;
+  gap: 5px;
+}
+.form-button {
+  display: flex;
+  gap: 10px;
 }
